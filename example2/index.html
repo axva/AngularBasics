@@ -1,0 +1,28 @@
+<!-- simple multiplicacion de cantidad y costo -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script> <!--CDN -->
+  <link rel="stylesheet" href="css/main.css">
+  <title>Data_Binding</title>
+</head>
+<body>
+  <div class="formulario">
+    <div ng-app ng-init="qty=1;cost=2"> <!-- valores inicializados -->
+      <center><h2>Factura</h2></center>
+      <div>
+        Cantidad: <input type="number" min="0" ng-model="qty">
+      </div>
+      <br>
+      <div>
+        Costo: <input type="number" min="0" ng-model="cost">
+      </div>
+      <br>
+      <div>
+        <b>Total:</b> {{qty * cost | currency}}
+      </div>
+    </div>
+  </div>
+</body>
+</html>
