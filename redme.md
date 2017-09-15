@@ -9,4 +9,4 @@ ___
 
 ___[to download click](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)___
 
-![Logo](/home/axva/Imágenes/wbsc.jpg "web-server-for-chrome")
+![Logo](/home/axva/Documentos/p_git/AngularBasics/wbsc.jpg "web-server-for-chrome")
