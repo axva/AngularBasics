@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app="todoApp"> <!-- Directiva del archivo principal o route -->
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script> <!--CDN -->
+  <link rel="stylesheet" href="css/todo.css">
+</head>
+
+<body>
+  <h2>Example1_lists</h2>
+  <div ng-controller="TodoListController as todoList">
+    <span>{{todoList.remaining()}} of {{todoList.todos.length}} remaining</span>
+    <ul class="unstyled">
+      <li ng-repeat="todo in todoList.todos">
+        <label class="checkbox">
+            <input type="checkbox" ng-model="todo.done">
+            <span class="done-{{todo.done}}">{{todo.text}}</span>
+          </label>
+      </li>
+    </ul>
+    <form ng-submit="todoList.addTodo()"> <!-- llamado a la funcion 'add.todo' -->
+      <input type="text" ng-model="todoList.todoText" size="30" placeholder="add new here">
+      <input class="btn-primary" type="submit" value="add to list">
+      <button type="button" class="btn-larg" ng-click="todoList.archive()">Clear all done</button>
+    </form>
+  </div>
+
+  <script src="js/todo.js"></script>
+</body>
+
+</html>
